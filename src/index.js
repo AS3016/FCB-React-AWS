@@ -2,15 +2,25 @@ import React from "react";
 import ReactDOM from "react-dom";
 import"./index.css";
 
+function Task(props){
+
+	return(
+
+		<li className="tasks-item">{props.taskName}</li>
+
+		);
+}
+
 function TaskList(){
 	return(
 		<ul>
-				<li className="task-item">Example 1 </li>
-				<li className="task-item">Example 2 </li>
-				<li className="task-item">Example 3</li>
+			<Task taskName="Example1" />
+			<Task taskName="Example2" />
+			<Task taskName="Example3" />
 		</ul>
 		);
 }
+
 function App(){
 	const paraStyle = {
 		"marginBottom": "15px"
