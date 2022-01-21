@@ -20,14 +20,17 @@ function TaskList(){
 	];
 
 	return(
-		<ul>
-			{taskItemsList.map((index, task) => {
-				console.log(task, index);
-				return <Task key={index} taskName={task} />;
-			})}
-			
-		</ul>
-		);
+		<div>
+			<input className="task-input" />
+			<ul>
+				{taskItemsList.map((task, index) => {
+					return <Task key={index} taskName={task} />;
+				})}
+				
+			</ul>
+		</div>
+	);
+
 }
 
 function App(){
