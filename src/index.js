@@ -12,11 +12,20 @@ function Task(props){
 }
 
 function TaskList(){
+	const taskItemsList = [
+		"Example1",
+		"Example2",
+		"Example3",
+		"Example4"
+	];
+
 	return(
 		<ul>
-			<Task taskName="Example1" />
-			<Task taskName="Example2" />
-			<Task taskName="Example3" />
+			{taskItemsList.map((index, task) => {
+				console.log(task, index);
+				return <Task key={index} taskName={task} />;
+			})}
+			
 		</ul>
 		);
 }
